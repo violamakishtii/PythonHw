@@ -1,0 +1,27 @@
+def main():
+    months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    rainfall_data = []
+
+    # Get rainfall input for each month
+    for month in months:
+        rainfall = float(input(f"Enter total rainfall for {month}: "))
+        rainfall_data.append(rainfall)
+
+    # Calculate total rainfall for the year
+    total_rainfall = sum(rainfall_data)
+
+    # Calculate average monthly rainfall
+    average_rainfall = total_rainfall / len(rainfall_data)
+
+    # Find the index of the month with the highest and lowest rainfall
+    max_rainfall_month_index = rainfall_data.index(max(rainfall_data))
+    min_rainfall_month_index = rainfall_data.index(min(rainfall_data))
+
+    # Display the results
+    print("Total rainfall for the year:", total_rainfall)
+    print("Average monthly rainfall:", average_rainfall)
+    print("Month with the highest rainfall:", months[max_rainfall_month_index])
+    print("Month with the lowest rainfall:", months[min_rainfall_month_index])
+
+if __name__ == "__main__":
+    main()
